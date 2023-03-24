@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/bahsisSecenekleriRadioGrup"
+        android:layout_width="162dp"
+        android:layout_height="145dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memnuniyetSorusu"
+        android:checkedButton="@id/yuzdeYirmiradioButton">
+
+        <RadioButton
+            android:id="@+id/yuzdeYirmiradioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF0000"
+            android:text="Mükkemmel(%20)"
+            app:useMaterialThemeColors="false"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="263dp" />
+
+        <RadioButton
+            android:id="@+id/yuzdeOnSekizradioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF0000"
+            android:text="İyi(%18)"
+            app:useMaterialThemeColors="false"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="311dp" />
+
+        <RadioButton
+            android:id="@+id/yuzdeOnBesadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF0000"
+            android:text="İdare Eder(%15)"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="359dp" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/bahsisYuvarlaSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bahşiş Üst Sayıya Yuvarlansın mı ?"
+        android:textSize="16sp"
+        android:height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bahsisSecenekleriRadioGrup" />
+
+    <TextView
+        android:id="@+id/memnuniyetSorusu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hizmetten Memnun Kaldiniz Mı ?"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hizmetBedeliEditText"></TextView>
+
+    <EditText
+        android:id="@+id/hizmetBedeliEditText"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hizmetBedeli"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <Button
+        android:id="@+id/hesaplaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hesapla"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bahsisYuvarlaSwitch"></Button>
+
+    <TextView
+        android:id="@+id/bahsisTutariText"
+        tools:text="Bahşiş Tutarı:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hesaplaButton"></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
